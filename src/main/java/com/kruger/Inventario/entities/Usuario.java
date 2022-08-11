@@ -1,9 +1,13 @@
 package com.kruger.Inventario.entities;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+
 @Entity
-@Table(name = "usuario")
+@Inheritance (strategy = InheritanceType.JOINED)
+//@NoArgsConstructor
 public class Usuario {
 
     // Atributos
@@ -16,9 +20,11 @@ public class Usuario {
     private String email;
     private String password;
 
-    // Constructor
-    public Usuario(Long id, Integer cedula, String nombres, String apellidos, String email, String password) {
-        this.id = id;
+    public Usuario(){
+
+    }
+
+    public Usuario(Integer cedula, String nombres, String apellidos, String email, String password) {
         this.cedula = cedula;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -26,7 +32,27 @@ public class Usuario {
         this.password = password;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public Integer getCedula() {
+        return cedula;
+    }
+
     public String getNombres() {
         return nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
