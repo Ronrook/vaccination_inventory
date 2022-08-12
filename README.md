@@ -42,7 +42,7 @@ Rutas y endpoints
 - http://localhost:8080/api/empleados -> GET lista de todos los empleados
 
 
-<h3>🌋 MODELO BASE DE DATOS</h3>
+<h3>🌋 MODELO DE CLASES</h3>
 
 ![Captura de pantalla 2022-03-29 112908](https://user-images.githubusercontent.com/![image](https://![Captura de pantalla 2022-08-11 223757](https://user-images.githubusercontent.com/78703403/184280958-546461b8-9c64-4f7a-b3ee-8d01cf3f9cf4.png)
 )
