@@ -43,6 +43,7 @@ Rutas y endpoints
 
 <h3>🌋 MODELO DE CLASES</h3>
 
-![image](https://user-images.githubusercontent.com/78703403/184380237-c7bfb296-eb14-41f3-8c3e-5f253dce408b.png)
+![image](https://user-images.githubusercontent.com/78703403/184380470-b9b5c17c-e88e-4369-9734-53bd15fbd2ae.png)
+
 
 
