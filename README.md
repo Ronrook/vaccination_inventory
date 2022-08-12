@@ -43,5 +43,5 @@ Rutas y endpoints
 
 <h3>🌋 MODELO DE CLASES</h3>
 
-![Captura de pantalla 2022-03-29 112908](https://user-images.githubusercontent.com/![image](https://!![image](https://user-images.githubusercontent.com/78703403/184377318-63538de1-b10c-4af8-a042-a69fc5b09283.png))
+![Captura de pantalla 2022-03-29 112908](https://user-images.githubusercontent.com/![image](https://!![image](https://user-images.githubusercontent.com/78703403/184377318-63538de1-b10c-4af8-a042-a69fc5b09283.png)
 
