@@ -29,8 +29,7 @@ Kruger Corporation requiere una aplicación para llevar un registro del inventar
 Para el despliege en local  del server se necesita lo siguiente:
 
 - Clonar el repositorio de gitHub Link del -> repositorio https://github.com/Ronrook/vaccination_inventory.git
-- Crear la base de datos  Postgresql, el proyecto continene el archivo application properties con las varibles de la base de datos.
-- Establecer la conexion a la base de datos, indicando sus credenciales en el archivo application.properties 
+- Crear la base de datos  Postgresql, luego escribir los valores en las variables del archivo env.properties.
 - posteriormente lanzar el servidor.
 
 Rutas y endpoints
