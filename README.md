@@ -32,15 +32,16 @@ Para el despliege en local  del server se necesita lo siguiente:
 - Crear la base de datos  Postgresql, el proyecto continene el archivo application properties con las varibles de la base de datos.
 - Establecer la conexion a la base de datos, indicando sus credenciales en el archivo application.properties 
 - posteriormente lanzar el servidor.
-* 
-http://localhost:8080/api/usuario  -> POST crear un usuario
-http://localhost:8080/api/empleado -> POST crear un empleado 
-http://localhost:8080/api/usuario/id -> GET usuario por id Long
-http://localhost:8080/api/empleado/id -> GET Empleado por id Long
-http://localhost:8080/api/usuarios -> GET lista de todos los usuarios
-http://localhost:8080/api/empleados -> GET lista de todos los empleados
+
+** Rutas y endpoints **
+- http://localhost:8080/api/usuario  -> POST crear un usuario
+- http://localhost:8080/api/empleado -> POST crear un empleado 
+- http://localhost:8080/api/usuario/id -> GET usuario por id Long
+- http://localhost:8080/api/empleado/id -> GET Empleado por id Long
+- http://localhost:8080/api/usuarios -> GET lista de todos los usuarios
+- http://localhost:8080/api/empleados -> GET lista de todos los empleados
 
 
 <h3>🌋 MODELO BASE DE DATOS</h3>
 
-<img src="https://drive.google.com/drive/my-drive"  width="500px">
+<img src="https://drive.google.com/file/d/1ce8ZNsF0JkxKL9Rw5er7Ve3UTCl3kIKc/view?usp=sharing"  width="500px">
