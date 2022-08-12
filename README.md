@@ -44,4 +44,5 @@ Rutas y endpoints
 
 <h3>🌋 MODELO BASE DE DATOS</h3>
 
-<img src="https://drive.google.com/file/d/1ce8ZNsF0JkxKL9Rw5er7Ve3UTCl3kIKc/view?usp=sharing"  width="500px">
+![Captura de pantalla 2022-03-29 112908](https://user-images.githubusercontent.com/![image](https://user-images.githubusercontent.com/78703403/184280825-ea89c654-0600-4c57-b60c-557af54d9e28.png)
+)
