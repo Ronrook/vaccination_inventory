@@ -33,7 +33,7 @@ Para el despliege en local  del server se necesita lo siguiente:
 - Establecer la conexion a la base de datos, indicando sus credenciales en el archivo application.properties 
 - posteriormente lanzar el servidor.
 
-** Rutas y endpoints **
+Rutas y endpoints
 - http://localhost:8080/api/usuario  -> POST crear un usuario
 - http://localhost:8080/api/empleado -> POST crear un empleado 
 - http://localhost:8080/api/usuario/id -> GET usuario por id Long
