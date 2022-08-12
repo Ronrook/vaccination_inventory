@@ -1,14 +1,13 @@
 package com.kruger.Inventario.controllers;
 
 
-import com.kruger.Inventario.entities.Empleado;
 import com.kruger.Inventario.entities.Usuario;
 import com.kruger.Inventario.exceptions.UsuarioNotFoundException;
 import com.kruger.Inventario.repository.UsuarioRepository;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class UsuarioController {
@@ -33,10 +32,23 @@ public class UsuarioController {
         return usuario;
     }
 
+    @GetMapping ("api/cedula/{cedula}")
+    public Usuario getCedula (@PathVariable Integer cedula){
+        return usuarioRepository.findByCedula(cedula);
+    }
 
-
+    // Crear un usuario
     @PostMapping("/api/usuario")
-    public Usuario newUsuario (@RequestBody Usuario usuario){
+    public Usuario newUsuario ( @Valid @RequestBody Usuario usuario){
+
+        Usuario usuario1 = usuarioRepository.findByCedula(usuario.getCedula());
+
+        if (usuario1 != null) {
+                if  (usuario1.getCedula().equals(usuario.getCedula())) {
+                    throw new UsuarioNotFoundException("El usuario con número de cédula " + usuario.getCedula() +
+                            " ya existe");
+                }
+        }
         return usuarioRepository.save(usuario);
 
     }

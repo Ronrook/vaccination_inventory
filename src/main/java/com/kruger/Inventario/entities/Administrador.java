@@ -6,8 +6,8 @@ import javax.persistence.Entity;
 import java.util.Date;
 
 @Entity
+// Pone el constructor por defecto
 @NoArgsConstructor
-//@PrimaryKeyJoinColumn( referencedColumnName = "id")
 public class Administrador extends Usuario {
 
     // Atributos
@@ -15,11 +15,6 @@ public class Administrador extends Usuario {
 
 
     // Constructor
-
-
-    public Administrador(Boolean isAdministrador) {
-        this.isAdministrador = isAdministrador;
-    }
 
     public Administrador(Integer cedula, String nombres, String apellidos, String email, String password, Boolean isAdministrador) {
         super(cedula, nombres, apellidos, email, password);

@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+// Pone el constructor por defecto
 @NoArgsConstructor
-//@PrimaryKeyJoinColumn( referencedColumnName = "id")
 public class Empleado extends Usuario {
 
     // Atributos
@@ -39,7 +39,7 @@ public class Empleado extends Usuario {
         return telefono;
     }
 
-    public Boolean getVacunado() {
+    public Boolean getIsVacunado() {
         return isVacunado;
     }
 }
