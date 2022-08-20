@@ -1,16 +1,21 @@
 package com.kruger.Inventario.entities;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import java.util.Date;
+
 
 @Entity
 // Pone el constructor por defecto
 @NoArgsConstructor
+// Metodos getter por defecto
+@Getter
 public class Administrador extends Usuario {
 
     // Atributos
+    @Column(name = "es_administrador")
     private Boolean isAdministrador;
 
 

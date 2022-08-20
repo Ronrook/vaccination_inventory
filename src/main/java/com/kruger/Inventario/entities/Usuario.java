@@ -68,21 +68,23 @@ public class Usuario {
     public void setNombres(String nombres) {
         // Validar nombres de usuario
        Boolean isString = Validaccion.validarString(nombres);
+        System.out.println("valor devuelto para nombres  " + isString);
 
-        if (!isString) {
+
+        if (isString) {
             this.nombres = nombres;
         }else {
             throw new UsuarioNotFoundException("Los nombres del usuario " +
                     "no deben contener números o caracteres especiales");
         }
-
     }
 
     public void setApellidos(String apellidos) {
         // Validar apellidos de usuario
         Boolean isString = Validaccion.validarString(apellidos);
+        System.out.println("valor devuelto para apellido  " + isString);
 
-        if (!isString) {
+        if (isString) {
             this.apellidos = apellidos;
         }else {
             throw new UsuarioNotFoundException("Los apellidos del usuario " +
