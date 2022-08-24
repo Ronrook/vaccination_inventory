@@ -16,8 +16,8 @@ public class Administrador extends Usuario {
 
     // Constructor
 
-    public Administrador(Integer cedula, String nombres, String apellidos, String email, String password, Boolean isAdministrador) {
-        super(cedula, nombres, apellidos, email, password);
+    public Administrador(Integer cedula, String nombres, String apellidos, String email, Boolean isAdministrador) {
+        super(cedula, nombres, apellidos, email);
         this.isAdministrador = isAdministrador;
     }
 

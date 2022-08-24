@@ -18,10 +18,6 @@ public class UsuarioController {
         this.usuarioRepository = usuarioRepository;
     }
 
-    //@GetMapping("/api/usuario")
-    //public String  saludo (){
-        //return "Saludos empleados";
-    //}
 
 
     // Buscar un usuario por su id
@@ -32,10 +28,7 @@ public class UsuarioController {
         return usuario;
     }
 
-    @GetMapping ("api/cedula/{cedula}")
-    public Usuario getCedula (@PathVariable Integer cedula){
-        return usuarioRepository.findByCedula(cedula);
-    }
+
 
     // Crear un usuario
     @PostMapping("/api/usuario")
