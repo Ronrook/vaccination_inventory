@@ -33,13 +33,8 @@ Para el despliege en local  del server se necesita lo siguiente:
 - Luego renombrar el archivo exampleenv.properties por env.properties y  escribir los valores de la base de datos en las variables del archivo.
 - posteriormente lanzar el servidor.
 
-Rutas y endpoints
-- http://localhost:8080/api/usuario  -> POST crear un usuario
-- http://localhost:8080/api/empleado -> POST crear un empleado 
-- http://localhost:8080/api/usuario/id -> GET usuario por id Long
-- http://localhost:8080/api/empleado/id -> GET Empleado por id Long
-- http://localhost:8080/api/usuarios -> GET lista de todos los usuarios
-- http://localhost:8080/api/empleados -> GET lista de todos los empleados
+Documentación de la API (Swagger-OpenAPI)
+- http://localhost:8080/swagger-ui/
 
 
 <h3>🌋 MODELO DE CLASES</h3>
