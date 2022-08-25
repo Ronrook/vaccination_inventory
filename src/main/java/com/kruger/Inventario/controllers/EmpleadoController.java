@@ -5,8 +5,10 @@ import com.kruger.Inventario.entities.*;
 import com.kruger.Inventario.exceptions.UsuarioNotFoundException;
 import com.kruger.Inventario.repository.EmpleadoRepository;
 import com.kruger.Inventario.repository.UsuarioRepository;
+import com.kruger.Inventario.services.EmpleadoService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +24,8 @@ public class EmpleadoController {
     // Atributos
     private final UsuarioRepository usuarioRepository;
     private final EmpleadoRepository empleadoRepository;
+    @Autowired
+    private EmpleadoService empleadoService;
 
     // Constructor
     public EmpleadoController(UsuarioRepository usuarioRepository, EmpleadoRepository empleadoRepository) {
@@ -31,11 +35,10 @@ public class EmpleadoController {
 
 
     // Buscar un empleado por su id
-    @GetMapping("/{id}")
+    @GetMapping("/{empleadoId}")
     @ApiOperation("Buscar un empleado por clave primaria id Long")
-    public Empleado getEmpleadoById (@ApiParam("Clave primaria tipo Long") @PathVariable Long id ){
-        return empleadoRepository.findById(id)
-                .orElseThrow(() -> new UsuarioNotFoundException("No se encontró empleado con el id: " + id));
+    public Empleado getEmpleadoById (@ApiParam("Clave primaria tipo Long") @PathVariable Long empleadoId ){
+        return empleadoService.getEmpleado(empleadoId);
 
     }
 
@@ -104,7 +107,8 @@ public class EmpleadoController {
     @GetMapping ()
     @ApiOperation("Recuperar listado de todos los empleados")
     public List<Empleado> findAllEmpleados() {
-        return empleadoRepository.findAll();
+        //return empleadoRepository.findAll();
+        return empleadoService.getAll();
     }
 
     // Método que devuelve una lista filtrada según el estado de vacunación
@@ -118,7 +122,7 @@ public class EmpleadoController {
     @GetMapping ("/vacuna/{vacuna}")
     @ApiOperation("Filtrar listado de empleados por tipo de vacuna")
     public List<Empleado> findAllVacuna(@ApiParam("Parámetro de busqueda Tipo vacuna") @PathVariable TipoVacuna vacuna) {
-        return empleadoRepository.findByVacuna(vacuna);
+        return empleadoService.getAllByVaccine(vacuna);
     }
 
 

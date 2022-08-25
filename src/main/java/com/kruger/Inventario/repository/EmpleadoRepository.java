@@ -10,6 +10,7 @@ import java.util.List;
 
 
 public interface EmpleadoRepository extends JpaRepository<Empleado, Long> {
+    // Query Methods
     List<Empleado> findByVacuna (TipoVacuna vacuna);
     List<Empleado> findByEstadoVacunacion (EstadoVacunacion estadoVacunacion);
 }
