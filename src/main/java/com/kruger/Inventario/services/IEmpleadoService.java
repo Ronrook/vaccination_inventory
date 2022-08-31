@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 import java.util.Optional;
 
-public interface IEmpmeadoService {
+public interface IEmpleadoService {
 
 
     Empleado getEmpleado(Long empleadoId);

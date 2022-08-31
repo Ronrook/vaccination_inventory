@@ -3,19 +3,17 @@ package com.kruger.Inventario.services;
 import com.kruger.Inventario.entities.Empleado;
 import com.kruger.Inventario.entities.EstadoVacunacion;
 import com.kruger.Inventario.entities.TipoVacuna;
-import com.kruger.Inventario.entities.Usuario;
 import com.kruger.Inventario.exceptions.UsuarioNotFoundException;
 import com.kruger.Inventario.repository.EmpleadoRepository;
 import com.kruger.Inventario.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EmpleadoService implements IEmpmeadoService {
+public class EmpleadoService implements IEmpleadoService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -32,17 +30,17 @@ public class EmpleadoService implements IEmpmeadoService {
 
     public Empleado save(Empleado empleado){
 
-        Usuario usuario = usuarioRepository.findByCedula(empleado.getCedula());
+        // Verificar que número de cédula no exista
+        if(usuarioRepository.existsByCedula(empleado.getCedula())){
+            throw new UsuarioNotFoundException("El usuario con número de cédula " + empleado.getCedula() +
+                    " ya existe");
 
-        if (usuario != null) {
-            if  (usuario.getCedula().equals(empleado.getCedula())) {
-                throw new UsuarioNotFoundException("El usuario con número de cédula " + empleado.getCedula() +
-                        " ya existe");
-            }
         }
+
         return empleadoRepository.save(empleado);
 
     }
+
 
     @Override
     public Empleado update(Empleado empleado) {

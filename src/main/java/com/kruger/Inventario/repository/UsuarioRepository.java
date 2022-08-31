@@ -9,5 +9,8 @@ import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    Usuario findByEmail (String email);
     Usuario findByCedula (Integer cedula);
+    // Verificar si ya existe usuario con esa cedula
+    boolean existsByCedula(int cedula);
 }

@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Positive;
+
 import java.util.UUID;
 
 
@@ -37,6 +38,7 @@ public class Usuario {
     @NotEmpty (message = "El email del usuario es un campo obligatorio")
     @Email
     private String email;
+
 
     private String password = UUID.randomUUID().toString().toUpperCase().substring(0,6);
 
@@ -87,4 +89,6 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 }

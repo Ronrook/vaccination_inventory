@@ -44,7 +44,7 @@ public class EmpleadoController {
 
 
     // Método que elimina un empleado
-    @PutMapping ("/actualizar/")
+    @PutMapping ("/actualizar")
     @ApiOperation("Actualizar un empleado")
     public ResponseEntity<Object> updateEmpleado(@RequestBody Empleado empleado) {
 
@@ -61,7 +61,7 @@ public class EmpleadoController {
         empleadoService.delete(userId);
         return ResponseEntity.status(HttpStatus.OK).body(true);
     }
-    
+
 
     /**
      * Develve el listado de todos los empleados
